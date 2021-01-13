@@ -5,9 +5,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Table from '../components/Table'
 import { useSelector } from 'react-redux';
 
-const windowHeight = Dimensions.get('window').height;
-const windowWidth = Dimensions.get('window').width;
-
 function Finish({ navigation, route }) {
   const { name, time } = route.params;
   const difficulty = useSelector(state => state.homeReducer.difficulty)

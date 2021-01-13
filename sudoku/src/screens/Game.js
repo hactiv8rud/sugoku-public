@@ -54,11 +54,10 @@ function Game({navigation}) {
     navigation.replace('Finish', { name, time });
   }
 
-  // function timeUp() {
-  //   dispatch(resetGame());
-  //   alert("Time's up!")
-  //   navigation.replace('Home');
-  // }
+  function goHome() {
+    alert("Time's up!")
+    navigation.replace('Home');
+  }
 
   useEffect(() => {
     dispatch(fetchBoard(difficulty));
@@ -86,9 +85,7 @@ function Game({navigation}) {
             size={20}
             running={isRunning}
             onChange={(x) => setTime(duration - x)}
-            onFinish={() => {
-              alert("Time's Up"), navigation.replace("Home");
-            }}
+            onFinish={() => goHome()}
             digitStyle={{ backgroundColor: "black" }}
             digitTxtStyle={{ color: "#1CC625" }}
             timeToShow={["M", "S"]}
