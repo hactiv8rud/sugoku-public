@@ -87,7 +87,7 @@ function Game({navigation}) {
             running={isRunning}
             onChange={(x) => setTime(duration - x)}
             onFinish={() => {
-              alert("Time's Up"), navigation.navigate("Home");
+              alert("Time's Up"), navigation.replace("Home");
             }}
             digitStyle={{ backgroundColor: "black" }}
             digitTxtStyle={{ color: "#1CC625" }}
